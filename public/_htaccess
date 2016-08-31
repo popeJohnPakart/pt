@@ -1,0 +1,9 @@
+The problem was with .htaccess file that comes with Laravel.
+
+I removed the following line
+
+RewriteRule ^ index.php [L]
+and added
+
+RewriteRule ^(.+)$ /index.php/$1 [L]
+It worked after this.
