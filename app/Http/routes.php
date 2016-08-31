@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/sample',function(){
+ return Response::make('hello john');
+});
+
 // JWT
 
 // Route::group(['prefix' => 'api/v1'], function()
