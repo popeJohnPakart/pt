@@ -24,8 +24,9 @@ class AuthenticateController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return "Auth index";
+    { 
+        // return "Auth index(hello user)";
+        return response()->json(['auth'=>Auth::user(), 'users'=>User::all()]);
     }
  
     public function authenticate(Request $request)
